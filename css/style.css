@@ -11,7 +11,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .8rem 0;
+    padding: .5rem 0;
     font-size: 18px;
     border-bottom: #888 solid 1px;
     margin: 0 6%;
@@ -90,6 +90,10 @@ header {
     display: flex;
     margin: 0;
     gap: 0;
+    flex-wrap: wrap;
+}
+#label{
+    width: 100%;
 }
 #book::after{
     content: '';
