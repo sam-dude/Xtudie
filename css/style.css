@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    position: relative !important;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8rem 0;
+    font-size: 18px;
+    border-bottom: #888 solid 1px;
+    margin: 0 6%;
+}
+.navs {
+    padding: 4px;
+}
+.navs ul {
+    list-style: none;
+    font-size: 16px;
+    padding: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.navs ul li { 
+    cursor: pointer;
+    padding: .5rem 1rem;
+}
+.navs ul li a{
+    text-decoration: none;
+    color: #000;
+    transition: 0.5s;
+}
+.navs ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background-color:#000;
+    transition: .5s;
+}
+.navs ul li a:hover::after {
+    width: 85%;
+}
+.sign-up button {
+    padding: .5rem 1rem;
+    font-size: 16px;
+    background-color: transparent;
+    border-radius: 3px;
+    border: #000 2px solid;
+}
+.logo {
+    font-weight: 600;
+    cursor: pointer;
+    padding: .5rem 0;
+}
+#sign-in {
+    border: none;
+    background-color: transparent;
+}
+
+#above-fold {
+    display: flex;
+    padding: 0 6%;
+    height: 85vh;
+}
+.intro {
+    padding: 8% 0;
+    width: 50%;
+}
+.intro p{
+    font-size: 16px;
+}
+.intro h1 {
+    font-size: 48px;
+    font-weight: 600;
+    padding: .3rem 0;
+}
+#search-books {
+    padding: 1.5rem 0;
+    display: flex;
+    margin: 0;
+    gap: 0;
+}
+#book::after{
+    content: '';
+    position: absolute;
+    padding: 1px;
+    width: 100%;
+    height: 80%;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    transform: translate(-50%,-50%) skew(-10deg);
+    background-color: rgb(248, 211, 156);
+}
+#search-books input, #search-books button{
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    margin: 0;
+    font-size: 16px;
+    border: #000 2px solid;
+}
+#search-books input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#search-books button{
+    background-color: #000;
+    color: #fff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
