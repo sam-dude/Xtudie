@@ -124,3 +124,10 @@ header {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
+
+/* Mobile screens */
+@media (max-width: 768px){
+    .intro {
+        width: 100%;
+    }
+}
