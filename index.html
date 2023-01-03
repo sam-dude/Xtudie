@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Xtudies</title>
 </head>
 <body>
     <!-- navbar -->
     <header>
-        <div class="logo">Xtudie<span>.</span></div>
+        <div class="logo"><img src="./assets/Xtudie Logo/xtudie_logo.png" alt="Xtudie Logo"></div>
         <div class="navs">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -23,14 +25,15 @@
         </div>
         <div class="sign-up">
             <button id="sign-in">Sign in</button>
-            <button>Create Account</button>
+            <button id="sign-up">Create Account</button>
         </div>
     </header>
 
     <section id="above-fold">
         <div class="intro">
             <p>Let's make the best investments</p>
-            <h1>There is no <br>friend as loyal <br>as a <span id="book">book</span></h1>
+            <h1>There is no <br>friend as loyal <br>as a <span id="book" data-aos="fade-right"
+                data-aos-anchor-placement="top-center">book</span></h1>
             <p>Read.Learn.Test.Repeat</p>
             <div id="search-books">
                 <input type="search" name="search books" id="search-book" placeholder="Find your books here">
@@ -38,10 +41,22 @@
                 <div id="label"><label for="search">Looking for school materials?</label></div>
             </div>
         </div>
-        <div class="illustrations"></div>
+        <div class="illustrations">
+            <div id="numberBook">1K +<br>books</div>
+        </div>
+    </section>
+
+    <section id="about">
+
     </section>
 
     <script src="./js/sandBox.js"></script>
     <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>

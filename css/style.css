@@ -1,11 +1,17 @@
+@import url(/assets/Nexa-Font/Nexa\ Bold.otf);
+@import url(/assets/Nexa-Font/Nexa\ Light.otf);
+@import url(/assets/Nexa-Font/Nexa\ Regular.otf);
+
+
 *{
     padding: 0;
     margin: 0;
     position: relative !important;
     box-sizing: border-box;
+    font-family: 'Nexa', sans-serif;
 }
 body {
-    font-family: sans-serif;
+    font-family: "NexaRegular", sans-serif;
 }
 header {
     display: flex;
@@ -36,6 +42,7 @@ header {
     text-decoration: none;
     color: #000;
     transition: 0.5s;
+    font-weight: 600;
 }
 .navs ul li a::after{
     content: '';
@@ -58,10 +65,23 @@ header {
     border-radius: 3px;
     border: #000 2px solid;
 }
+#sign-up {
+    border-radius: 3px;
+    border: #000 2px solid;
+    transition: .5s;
+    font-weight: 600;
+}
+#sign-up:hover {
+    background-color: #000;
+    color: #fff;
+}
 .logo {
     font-weight: 600;
     cursor: pointer;
-    padding: .5rem 0;
+    padding: .1rem 0;
+}
+.logo img {
+    width: 130px;
 }
 #sign-in {
     border: none;
@@ -117,6 +137,8 @@ header {
 #search-books input {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    outline: none;
+    transition: .5s;
 }
 #search-books button{
     background-color: #000;
@@ -124,7 +146,23 @@ header {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
-
+#numberBook{
+    font-size: 20px;
+    font-weight: 600;
+}
+#numberBook::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    border-radius: 3px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: aqua;
+}
+/*About*/
 /* Mobile screens */
 @media (max-width: 768px){
     .intro {
