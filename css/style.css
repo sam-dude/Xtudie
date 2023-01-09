@@ -1,26 +1,35 @@
-@import url(/assets/Nexa-Font/Nexa\ Bold.otf);
-@import url(/assets/Nexa-Font/Nexa\ Light.otf);
-@import url(/assets/Nexa-Font/Nexa\ Regular.otf);
-
+@charset "UTF-8";
+@font-face {
+    font-family: xtudiefont;
+    src: url(../assets/Nexa-Font/Nexa\ Bold.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: xtudiefont;
+    src: url(../assets/Nexa-Font/Nexa\ Light.otf);
+    font-weight: lighter;
+}
+@font-face {
+    font-family: xtudiefont;
+    src: url(../assets/Nexa-Font/Nexa\ Regular.otf);
+    font-weight: regular;
+}
 
 *{
     padding: 0;
     margin: 0;
     position: relative !important;
     box-sizing: border-box;
-    font-family: 'Nexa', sans-serif;
 }
 body {
-    font-family: "NexaRegular", sans-serif;
+    font-family: "xtudiefont", sans-serif;
+    color: #473E64;
+    background-color: #F9F7FF;
 }
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: .5rem 0;
+    padding: .5rem 6%;
     font-size: 18px;
-    border-bottom: #888 solid 1px;
-    margin: 0 6%;
+    background-color: #fcfbfd;
 }
 .navs {
     padding: 4px;
@@ -38,47 +47,41 @@ header {
     cursor: pointer;
     padding: .5rem 1rem;
 }
-.navs ul li a{
+.navbar-nav ul li a{
     text-decoration: none;
-    color: #000;
-    transition: 0.5s;
+    color: #473E64;
+    transition: 0.5;
     font-weight: 600;
 }
-.navs ul li a::after{
+.nav-links a::after{
     content: '';
     position: absolute;
-    bottom: -3px;
+    bottom: 1px;
     left: 50%;
     transform: translateX(-50%);
     height: 2px;
     width: 0;
-    background-color:#000;
+    background-color:#6255A5;
     transition: .5s;
 }
-.navs ul li a:hover::after {
-    width: 85%;
+.nav-links a:hover::after {
+    width: 60%;
 }
 .sign-up button {
-    padding: .5rem 1rem;
+    padding: .6rem 1rem;
     font-size: 16px;
-    background-color: transparent;
-    border-radius: 3px;
-    border: #000 2px solid;
+    color: #000;
 }
 #sign-up {
-    border-radius: 3px;
-    border: #000 2px solid;
+    border-radius: 10px;
+    background-color: #79BF91;
     transition: .5s;
-    font-weight: 600;
+    border: none;
+    color: #fff;
 }
 #sign-up:hover {
     background-color: #000;
     color: #fff;
-}
-.logo {
-    font-weight: 600;
-    cursor: pointer;
-    padding: .1rem 0;
 }
 .logo img {
     width: 130px;
@@ -87,11 +90,13 @@ header {
     border: none;
     background-color: transparent;
 }
-
+.navbar-brand {
+    flex: 1;
+}
 #above-fold {
     display: flex;
     padding: 0 6%;
-    height: 85vh;
+    height: 90vh;
 }
 .intro {
     padding: 8% 0;
@@ -115,24 +120,15 @@ header {
 #label{
     width: 100%;
 }
-#book::after{
-    content: '';
-    position: absolute;
-    padding: 1px;
-    width: 100%;
-    height: 80%;
-    left: 50%;
-    top: 50%;
-    z-index: -1;
-    transform: translate(-50%,-50%) skew(-10deg);
-    background-color: rgb(248, 211, 156);
+#book{
+    color: #79BF91;
 }
 #search-books input, #search-books button{
-    padding: 0.5rem 1rem;
-    border-radius: 3px;
+    padding: .5rem 1.2rem;
+    border-radius: 10px;
     margin: 0;
     font-size: 16px;
-    border: #000 2px solid;
+    border: #6255A5 2px solid;
 }
 #search-books input {
     border-top-right-radius: 0;
@@ -141,31 +137,134 @@ header {
     transition: .5s;
 }
 #search-books button{
-    background-color: #000;
+    background-color: #6255A5;
     color: #fff;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
-#numberBook{
-    font-size: 20px;
+/* About */
+#about{
+    background-color: #fff;
+    padding: 0 6%;
+}
+#aboutUsTitle {
+    font-weight: 60 0;
+    text-align: center;
+}
+#features {
+    display: flex;
+    justify-content: space-around;
+}
+.cards{
+    transition: transform .5s;
+    cursor: pointer;
+}
+.cards:hover{
+    transform: translateY( 10px) scale(1.05);
+}
+/*Materials*/
+#materials{
+    padding: 0 6%; 
+}
+#pMaterials {
     font-weight: 600;
+    text-align: center;
+    margin: auto;
 }
-#numberBook::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 100px;
-    height: 100px;
-    top: 50%;
-    left: 50%;
-    border-radius: 3px;
-    transform: translate(-50%, -50%) rotate(45deg);
-    background-color: aqua;
+.materials-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-/*About*/
+.materials-list .material {
+    width: 32%;
+    border: 1px rgb(207, 202, 202) solid;
+    background-color: #fcfbfd;
+    border-radius: 10px;
+    padding: 1%;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+}
+.materials-list .material .active {
+    background-color: #6255A5;
+    color: #fff;
+}
+.materials-list .material #material-name {
+    font-weight: 600;
+    font-size: 24px;
+    color: #554D70;
+}
+.materials-list .material #price {
+    color: #79BF91;
+    font-weight: 600;
+    font-size: 18px;
+}
+.materials-list .material button {
+    border: 2px #6255A5 solid;
+    padding: .5rem 1.1rem;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: .7rem;
+    color: #6255A5;
+    transition: .3s;
+}
+.materials-list .material button:hover{
+    background-color: #79BF91;
+    color: #F9F7FF;
+    border-color: #79BF91;
+}
+.materials-foot {
+    display: flex;
+}
+.material-info {
+    display: flex;
+    gap: 12px;
+}
+.material-container .materials-foot a {
+    text-decoration: none;
+    color: #fff;
+    padding: .8rem 1.2rem;
+    border-radius: 10px;
+    margin: auto;
+    font-size: 16px;
+    background-color: #79BF91;
+    transition: .3s;
+}
+.material-container .materials-foot a:hover{
+    background-color: #1b793c;
+    color: #fcfbfd;
+}
+#menu {
+    display: none;
+}
+.login {
+    display: none;
+}
 /* Mobile screens */
 @media (max-width: 768px){
+    header {
+        padding: .5rem 3%;
+    }
     .intro {
         width: 100%;
+    }
+    .intro h1{
+        font-size: 36px;
+    }
+    .materials-list .material {
+        width: 48%;
+        padding: 2%;
+    }
+    .materials-list .material #material-name{
+        font-size: 18px;
+    }
+    #menu{
+        display: block;
+    }
+    .materials-list .material button{
+          padding: .3rem .8rem;
+          font-size: 14px;
     }
 }
